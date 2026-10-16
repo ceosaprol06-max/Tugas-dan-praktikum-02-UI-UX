@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form Pemesanan Barang</title>
+</head>
+<body>
+
+<nav>
+  <table border="1" width="100%" cellpadding="6" cellspacing="0">
+    <tr>
+      <td align="center">
+        <a href="#">Home</a> |
+        <a href="#">Generate Link</a> |
+        <a href="#">Transaction History</a> |
+        <a href="#">Policy</a> |
+        <a href="#">Logout</a>
+      </td>
+    </tr>
+  </table>
+</nav>
+<br>
+
+<form action="http://localhost/form-hasil-pemesanan.php" method="post">
+<table border="0" cellpadding="6" cellspacing="0">
+
+  <tr>
+    <!-- Kolom kiri: foto + tombol upload (menyatu ke bawah) -->
+    <td rowspan="10" valign="top" align="center">
+      <img src="/Desain UL UX/Praktikum 02/Screenshot_20261015-075013.jpg " alt="Foto Barang" width="200" height="200"><br><br>
+      <input type="file" name="foto" accept="image/*">
+    </td>
+    <td align="right"><label for="judul">Title Here :</label></td>
+    <td><input type="text" id="judul" name="judul" size="40" value="MacBook Air £800"></td>
+  </tr>
+
+  <tr>
+    <td align="right" valign="top"><label for="deskripsi">Description :</label></td>
+    <td><textarea id="deskripsi" name="deskripsi" rows="5" cols="38">Year : 2009
+Model :
+Condition : Mint</textarea></td>
+  </tr>
+
+  <tr>
+    <td align="right"><label for="rekening">Account Number :</label></td>
+    <td><input type="text" id="rekening" name="rekening" size="40" value="123-456-789-0"></td>
+  </tr>
+
+  <tr>
+    <td align="right"><label for="bank">Bank :</label></td>
+    <td>
+      <select id="bank" name="bank">
+        <option value="hsbc" selected>HSBC</option>
+        <option value="bca">BCA</option>
+        <option value="mandiri">Mandiri</option>
+        <option value="bni">BNI</option>
+        <option value="bri">BRI</option>
+      </select>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="right"><label for="pemilik">Account Holder :</label></td>
+    <td><input type="text" id="pemilik" name="pemilik" size="30" placeholder="Name Here"></td>
+  </tr>
+
+  <tr>
+    <td align="right"><label for="transaksi">Transaction :</label></td>
+    <td><input type="number" id="transaksi" name="transaksi" min="1" max="10" value="1"></td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <small>* if the transaction is for 3 person, choose 3 from the drop-down list</small><br>
+      <input type="checkbox" id="kirim_hp" name="kirim_hp" checked>
+      <label for="kirim_hp">Send to Mobile Phone</label><br>
+      <input type="checkbox" id="kirim_email" name="kirim_email" checked>
+      <label for="kirim_email">Send to Email</label>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="right"><label for="hp">Send to Mobile Phone :</label></td>
+    <td><input type="text" id="hp" name="hp" size="40" value="1234567890, 1234567891"></td>
+  </tr>
+
+  <tr>
+    <td align="right"><label for="email">Send to Email :</label></td>
+    <td><input type="text" id="email" name="email" size="40" value="mfmm2g13@soton.ac.uk, fys_06@yahoo.com"></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td><button type="submit">Generate Nabr Link</button></td>
+  </tr>
+
+</table>
+</form>
+
+</body>
+</html>
